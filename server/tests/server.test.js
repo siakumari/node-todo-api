@@ -19,6 +19,7 @@ const todos = [{
 
 describe('POST /todos', () => {
 
+
 it('should create a new todo', (done) => {
 
   beforeEach((done) => {
@@ -27,10 +28,8 @@ it('should create a new todo', (done) => {
     }).then(() => {done()});
   });
 
-
     var text = 'Test todo text';
-
-    request(app)
+     request(app)
       .post('/todos')
       .send({text})
       .expect(200)
